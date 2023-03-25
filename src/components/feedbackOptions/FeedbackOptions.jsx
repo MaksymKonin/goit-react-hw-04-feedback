@@ -1,16 +1,20 @@
+import PropTypes from 'prop-types';
+import css from './FeedbackOptions.module.css';
+
 const FeedbackOptions = ({ onLeaveFeedback }) => {
   return (
-    <div>
-      <button value="good" onClick={onLeaveFeedback}>
+    <div className={css.wrap}>
+      <button className={css.btn} value="good" onClick={onLeaveFeedback}>
         good
       </button>
-      <button value="neutral" onClick={onLeaveFeedback}>
+      <button className={css.btn} value="neutral" onClick={onLeaveFeedback}>
         neutral
       </button>
-      <button value="bad" onClick={onLeaveFeedback}>
+      <button className={css.btn} value="bad" onClick={onLeaveFeedback}>
         bad
       </button>
     </div>
   );
 };
 export default FeedbackOptions;
+Notification.prototypes = { onLeaveFeedback: PropTypes.func.isRequired };

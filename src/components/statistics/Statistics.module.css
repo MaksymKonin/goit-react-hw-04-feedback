@@ -1,0 +1,13 @@
+.title {
+  margin-bottom: 12px;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: start;
+}

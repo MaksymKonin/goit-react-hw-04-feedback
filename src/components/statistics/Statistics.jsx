@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import css from './Statistics.module.css';
 
 const Statistics = ({
   good,
@@ -9,12 +10,14 @@ const Statistics = ({
 }) => {
   return (
     <div>
-      <h2>Statistics</h2>
-      <p>good: {good}</p>
-      <p>neutral: {neutral}</p>
-      <p>bad: {bad}</p>
-      <p>Total: {onCountTotalFeedback()}</p>
-      <p>Pozitive feedback: {onCountPositiveFeedbackPercentage()}%</p>
+      <h2 className={css.title}>Statistics</h2>
+      <div className={css.wrap}>
+        <p>good: {good}</p>
+        <p>neutral: {neutral}</p>
+        <p>bad: {bad}</p>
+        <b>Total: {onCountTotalFeedback()}</b>
+        <b>Pozitive feedback: {onCountPositiveFeedbackPercentage()}%</b>
+      </div>
     </div>
   );
 };
@@ -24,4 +27,6 @@ Statistics.prototypes = {
   good: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
+  onCountTotalFeedback: PropTypes.func.isRequired,
+  onCountPositiveFeedbackPercentage: PropTypes.func.isRequired,
 };
