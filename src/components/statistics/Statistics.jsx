@@ -21,6 +21,7 @@ const Statistics = ({
     </div>
   );
 };
+
 export default Statistics;
 
 Statistics.prototypes = {

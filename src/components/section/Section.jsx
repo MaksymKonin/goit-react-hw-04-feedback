@@ -9,6 +9,7 @@ const Section = ({ title, children }) => {
     </section>
   );
 };
+
 export default Section;
 
 Section.prototypes = {
